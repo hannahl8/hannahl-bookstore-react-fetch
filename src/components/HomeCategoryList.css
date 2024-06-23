@@ -1,0 +1,24 @@
+.category-image-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.category-image-items div {
+  padding: 0.5em 0;
+  background: rgba(0, 0, 0, 0.5); /* last # is percent opacity */
+  color: white;
+  transform: translateY(-2.25em);
+  margin-bottom: -2em;
+}
+
+.category-image-items ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+

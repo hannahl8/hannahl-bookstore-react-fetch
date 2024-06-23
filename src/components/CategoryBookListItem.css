@@ -1,0 +1,52 @@
+.book-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
+  gap: 0.1em;
+  border: solid 1px var(--default-text-color);
+  border-radius: 0.25em;
+  width: calc(210px + 2em);
+}
+
+.book-open {
+  position: absolute;
+  cursor: pointer;
+  transform: translateX(2.5em) translateY(2em) rotate(45deg);
+  background-color: inherit;
+  font-size: xx-large;
+  color: var(--primary-color);
+}
+
+.book-open:hover {
+  color: var(--secondary-color);
+}
+
+.book-image a img {
+  height: 180px;
+  width: 180px;
+}
+
+.book-title {
+  font-weight: bold;
+  height: 20px;
+  overflow: hidden;
+}
+
+.book-title:hover,
+.book-quote:hover {
+  cursor: default;
+}
+
+.book-author {
+  font-style: italic;
+}
+
+.book-quote {
+  font-size: small;
+  height: 40px;
+  overflow: hidden;
+}

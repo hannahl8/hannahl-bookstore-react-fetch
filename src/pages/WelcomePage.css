@@ -1,0 +1,28 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.welcome-store,
+.welcome-website {
+    text-align: center;
+    width: 40%;
+}
+
+.big-logo-and-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 20%;
+}
+

@@ -1,0 +1,10 @@
+.category-image-items ul li:hover {
+  transform: scale(1.1);
+}
+
+.category-image-items ul li a img {
+  width: 200px;
+}
+
+
+

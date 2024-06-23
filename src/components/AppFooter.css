@@ -1,0 +1,22 @@
+footer {
+  background: var(--primary-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1em;
+  gap: 0.25em;
+  border-top: double 5px var(--secondary-color);
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 0.25em;
+}
+
+.social-media-icons a {
+  color: var(--default-text-color);
+  /*font-size: x-large;*/
+}

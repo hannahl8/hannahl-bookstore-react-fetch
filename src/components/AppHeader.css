@@ -1,0 +1,53 @@
+header {
+  background: var(--primary-background-color);
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1em;
+  gap: 1em;
+  border-bottom: double 5px var(--secondary-color);
+}
+
+.bookstore-logo-and-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.bookstore-logo-and-title img {
+  width: 100px;
+}
+
+.logo-and-text:hover {
+  /*transform: scale(1.1);*/
+  color: var(--default-text-color);
+}
+
+.text-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.menu-search-cart-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.text-logo {
+
+}
+
+.search-bar {
+  padding: 0.5em;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+}

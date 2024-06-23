@@ -1,0 +1,21 @@
+.category-page {
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.category-nav {
+  padding: 1em;
+  text-wrap: nowrap;
+  border: double 5px var(--tertiary-color);
+}
+
+.category-nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-nav ul li {
+  padding: 1em 0;
+}
