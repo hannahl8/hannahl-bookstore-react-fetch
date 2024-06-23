@@ -14,3 +14,15 @@ export const apiUrl =
     `${location.protocol}//${location.hostname}:` +
     `${location.port === '5173' ? '8080' : location.port}` +
     `${import.meta.env.BASE_URL}/api`
+
+export const wineIcon = "fa-solid fa-wine-glass";
+export const beerIcon = "fa-solid fa-beer";
+export const teaIcon = "fa-solid fa-coffee";
+export const coffeeIcon = "fa-solid fa-mug-hot";
+
+export const icons: Record<string, string> = {
+    'Wine': wineIcon,
+    'Beer': beerIcon,
+    'Tea': teaIcon,
+    'Coffee': coffeeIcon
+}

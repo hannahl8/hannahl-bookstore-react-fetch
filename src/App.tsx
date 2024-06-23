@@ -18,13 +18,11 @@ export default function App() {
             .catch(console.error);
     }, []);
 
-    console.log(categories);
-
     return (
         <div className="app">
             <AppHeader categories={categories}/>
             <Routes>
-                <Route path="/" element={<WelcomePage/>}/>
+                <Route path="/" element={<WelcomePage categories={categories}/>}/>
                 <Route path="/category/:categoryName" element={<CategoryPage categories={categories}/>}/>
             </Routes>
             <AppFooter/>

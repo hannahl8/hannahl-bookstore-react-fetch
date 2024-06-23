@@ -1,16 +1,17 @@
 export interface CategoryItem {
     categoryId: number;
     name: string;
-    icon?: string;
 }
 
 export interface BookItem {
     bookId: number;
     title: string;
     author: string;
+    description?: string;
     price: number;
+    rating?: number;
     isPublic: boolean;
-    quote: string;
+    isFeatured?: boolean;
     categoryId: number;
 }
 

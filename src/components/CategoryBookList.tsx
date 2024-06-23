@@ -1,21 +1,29 @@
 // import types
 
 import {useParams} from "react-router-dom";
-import {getBooksForCategory} from "../data";
 import "./CategoryBookList.css";
 import CategoryBookListItem from "./CategoryBookLIstItem";
-import {BookItem, CategoryItem} from "../types";
-import { getCategories } from "../data";
+import {CategoryProps} from "../types";
+import {useEffect, useState} from "react";
+import axios from "axios";
+import {apiUrl} from "../utils.ts";
 
-export default function CategoryBookList() {
+export default function CategoryBookList(props: CategoryProps) {
+
     const {categoryName} = useParams();
 
-    const bookList: BookItem[] = getBooksForCategory(categoryName as string);
+    const [books, setBooks] = useState([]);
 
-    const categories: CategoryItem[] = getCategories();
+    useEffect(() => {
+        axios.get(`${apiUrl}/categories/name/${categoryName}/books`)
+            .then((result) => setBooks(result.data))
+            .catch(console.error);
+    }, [categoryName]);
 
-    const bookBoxList = bookList.map((myBook) => (
-        <CategoryBookListItem book={myBook} categories={categories}/>
+    const bookBoxList = books.map((myBook) => (
+        <CategoryBookListItem book={myBook} categories={props.categories}/>
     ));
-    return <section className="category-book-list"><ul id="book-boxes">{bookBoxList}</ul></section>;
+    return <section className="category-book-list">
+        <ul id="book-boxes">{bookBoxList}</ul>
+    </section>;
 }
